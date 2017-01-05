@@ -10,7 +10,7 @@ if [ -n "$PROXY" ]; then
   for node_clean in $node_dirty
   do 
     n=$((n+1))
-    ENDPOINTS="    server s$n $node_clean maxconn 32 check check-ssl verify none \n$ENDPOINTS "
+    ENDPOINTS="    server s$n $node_clean maxconn 32 check verify none \n$ENDPOINTS "
   done
 
   echo -e $ENDPOINTS
